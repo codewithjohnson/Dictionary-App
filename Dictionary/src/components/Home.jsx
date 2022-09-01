@@ -9,14 +9,27 @@ const Home = () => {
       </div>
       <div className="input__containers">
         <div className="text__input">
-          <label htmlFor="text" className="label">Enter a word</label>
-          <input type="text" name="text"/>
+          <label htmlFor="text" className="label">
+            Enter a word
+          </label>
+          <input type="text" name="text" />
         </div>
         <div className="btn">
           <button className="submit__btn">search</button>
         </div>
       </div>
-      <div className="output_container"></div>
+      <div className="output__containers">
+        <div className="words word">
+          <div className="what__word">
+            <span className="word__title">Engage</span>
+            <span className="partOfSpeech_phonetics">Lorem, ipsum.</span>
+          </div>
+          <div className="say"></div>
+        </div>
+        <div className="words definition">
+         <span className="definition__title">Definition</span>
+        </div>
+      </div>
 
       <div className="signature_container">
         <p className="signature">Designed by Muyiwa Johnson</p>
