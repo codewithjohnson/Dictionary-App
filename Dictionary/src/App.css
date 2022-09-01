@@ -32,7 +32,7 @@ body {
   background-color: white;
   padding: 1.5rem 1.2rem;
   border-radius: 0.3rem;
-  width: 22rem;
+  width: 19rem;
 }
 
 /* ----------------------HEAD START---------------------- */
@@ -52,6 +52,7 @@ body {
 
 .head__title::first-letter {
   background-color: darkslateblue;
+  background-color: cornflowerblue;
   margin-right: 0.1rem;
   color: white;
   padding: 0.1rem 0.4rem;
@@ -90,10 +91,12 @@ body {
 
 .btn .submit__btn {
   background-color: darkslateblue;
+  background-color: cornflowerblue;
   color: white;
   outline: none;
   padding: 0.5rem;
   border: 1px solid darkslateblue;
+  border: 1px solid cornflowerblue;
   cursor: pointer;
 }
 .submit__btn:hover {
@@ -163,6 +166,6 @@ body {
 
 @media screen and (max-width: 480px) {
   .Home {
-    width: 90%;
+    width: 87%;
   }
 }
