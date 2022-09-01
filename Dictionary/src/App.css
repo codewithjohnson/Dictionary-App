@@ -33,6 +33,7 @@ body {
   border-radius: 0.3rem;
   width: 22rem;
 }
+
 /* ----------------------HEAD START---------------------- */
 .head {
   width: 100%;
@@ -45,10 +46,10 @@ body {
 .head__title {
   color: rgb(0, 0, 0);
   text-align: center;
+  user-select: none;
 }
 
 .head__title::first-letter {
-  background-color: rgba(0, 0, 0, 0.918);
   background-color: darkslateblue;
   margin-right: 0.1rem;
   color: white;
@@ -56,38 +57,49 @@ body {
 }
 
 /* ------------ INPUT CONTAINER START--------------------------- */
-.input__container {
+.input__containers {
   width: 100%;
   margin-top: 0.9rem;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cancel_active {
-  display: block;
+.text__input {
+  width: 80%;
+  margin-right: 0.3rem;
 }
-
+.text__input > input {
+  border: 1px solid rgba(0, 0, 0, 0.479);
+  width: 100%;
+  outline: none;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+}
 .label {
   color: rgba(0, 0, 0, 0.808);
   font-family: "Poppins", sans-serif;
 }
 
-.input__container > input {
-  background-color: white;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.658);
-  padding: 0.6rem 0.4rem;
-  margin-top: 0.4rem;
-  outline: 0;
-}
-.input__container > span {
-  position: absolute;
-  right: 12px;
-  color: gray;
-  bottom: 6px;
-  /* display: none; */
+.btn {
+  width: 20%;
+  align-self: end;
 }
 
-/* ------------------ SIGNATURE CONTAINER  START----------------- */
+.btn .submit__btn {
+  background-color: darkslateblue;
+  color: white;
+  outline: none;
+  padding: 0.5rem;
+  border: 1px solid darkslateblue;
+  cursor: pointer;
+}
+.submit__btn:hover {
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+  color: white;
+}
+/* ----------------- SIGNATURE CONTAINER  START----------------- */
 .signature_container {
   display: flex;
   justify-content: space-between;
@@ -101,6 +113,7 @@ body {
   animation: AnimateText 15s linear infinite;
   font-size: 0.7rem;
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 @keyframes AnimateText {
