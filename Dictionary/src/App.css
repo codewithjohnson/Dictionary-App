@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
 
 * {
   margin: 0;
@@ -90,18 +90,16 @@ body {
 }
 
 .btn .submit__btn {
-  background-color: darkslateblue;
   background-color: cornflowerblue;
   color: white;
   outline: none;
   padding: 0.5rem;
-  border: 1px solid darkslateblue;
   border: 1px solid cornflowerblue;
   cursor: pointer;
 }
 .submit__btn:hover {
-  background-color: cornflowerblue;
-  border-color: cornflowerblue;
+  background-color: darkslateblue;
+  border-color: darkslateblue;
   color: white;
 }
 /* ----------------- SIGNATURE CONTAINER  START----------------- */
@@ -135,22 +133,24 @@ body {
   width: 100%;
 }
 
-.words{
-  padding: 0.6rem ;
+.words {
+  padding: 0.6rem;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.192);
   border-radius: 0.1rem;
   margin-bottom: 1.2rem;
-  border:2px solid transparent;
-  border-left-color: darkslateblue;
+  border: 1px solid transparent;
 }
-
+.word {
+  border-left-color:darkslateblue;
+}
 .what__word {
   display: flex;
   flex-direction: column;
 }
-.word__title ,.definition__title{
+.word__title,
+.definition__title {
   font-size: 0.9rem;
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-weight: bold;
 }
 
@@ -159,10 +159,9 @@ body {
   font-size: 0.7rem;
 }
 /* STYLING DEFINITIONS */
-.definition{
-  border-left-color:chocolate;
+.definition {
+  border-left-color:darkorchid;
 }
-
 
 @media screen and (max-width: 480px) {
   .Home {
