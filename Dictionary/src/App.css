@@ -214,7 +214,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    width: 87%;
+    width: 90%;
     margin-top:1.2rem;
   }
   .title {
@@ -234,6 +234,7 @@ body {
   .definition {
     font-size: 0.8rem;
     font-weight: 400;
+    margin-bottom:0.7rem;
   }
   .below{
     padding: 1.2rem;
