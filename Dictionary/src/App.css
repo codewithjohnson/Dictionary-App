@@ -67,7 +67,7 @@ body {
 
 .input_box input {
   width: 100%;
-  padding: 0.6rem 0.3rem;
+  padding: 0.7rem 0.3rem;
   border: 1px solid rgba(0, 0, 0, 0.151);
   margin-right: 0.4rem;
   outline: none;
@@ -76,7 +76,7 @@ body {
 .submit_btn {
   font-family: "Poppins", sans-serif;
   border: 1px solid cornflowerblue;
-  padding: 0.55rem;
+  padding:0.61rem 0.7rem;
   background: linear-gradient(60deg, cornflowerblue, darkslateblue);
   color: white;
   font-size: 0.8rem;
