@@ -98,7 +98,7 @@ body {
   background-repeat: no-repeat;
   opacity: 0.8;
   border: none;
-  padding: 1.5rem 1.2rem;
+  padding: 1.3rem 1.2rem;
 }
 
 .word_sound {
@@ -177,8 +177,9 @@ body {
 .synonyms__content,
 .antonyms__content {
   font-size: 0.7rem;
+  font-family: "Poppins", sans-serif;
   line-height: 1.9;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.582);
 }
 
@@ -220,6 +221,17 @@ body {
   }
   .title {
     font-size: 1.5rem;
+  }
+  .word_container {
+    color: white;
+    background: url("./assets/cool.jpg");
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    border: none;
+    padding: 1.4rem 1.2rem;
   }
   .word_title {
     font-size: 1.4rem;
