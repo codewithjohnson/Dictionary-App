@@ -233,4 +233,7 @@ body {
     font-size: 0.8rem;
     font-weight: 400;
   }
+  .below{
+    padding: 1.3rem;
+  }
 }
