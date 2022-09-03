@@ -213,7 +213,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    width: 83%;
+    width: 85%;
     margin-top:1.2rem;
   }
   .title {
