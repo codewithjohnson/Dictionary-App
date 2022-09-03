@@ -24,8 +24,14 @@ function App() {
           </span>
         </div>
         <div className="partOfSpeech_definition">
-          <p className="part">Noun</p>
-          <p className="definition">Lorem ipsum dolor sit amet.</p>
+          <div className="part0fSpeech_view">
+            <span className="part0fSpeech">Noun</span>
+            <span className="view">/hɛˈləʊ/</span>
+          </div>
+          <p className="definition">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
+            officia.
+          </p>
         </div>
       </div>
 
