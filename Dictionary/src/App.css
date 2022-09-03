@@ -154,8 +154,8 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .container {
-    width: 17rem;
+  .App {
+    width: 90%;
   }
   .title {
     font-size: 1.47rem;
