@@ -1,38 +1,38 @@
 import React from "react";
-import { useState } from "react";
-// <span class="material-symbols-sharp">close</span>
+import "../App.css";
+
 const Home = () => {
   return (
-    <div className="Home">
-      <div className="head">
-        <h2 className="head__title">English Dictionary</h2>
-      </div>
-      <div className="input__containers">
-        <div className="text__input">
-          <label htmlFor="text" className="label">
-            Enter a word
-          </label>
-          <input type="text" name="text" />
-        </div>
-        <div className="btn">
-          <button className="submit__btn">search</button>
-        </div>
-      </div>
-      <div className="output__containers">
-        <div className="words word">
-          <div className="what__word">
-            <span className="word__title">Engage</span>
-            <span className="partOfSpeech_phonetics">Lorem, ipsum.</span>
+    <div className="container">
+      <div className="above">
+        <h2 className="title">english dictionary</h2>
+        <div className="inputs_container">
+          <div className="input_box">
+            <input type="text" placeholder="Search a Word" />
           </div>
-          <div className="say"></div>
+          <div className="btn">
+            <button className="submit_btn">Search</button>
+          </div>
         </div>
-        <div className="words definition">
-         <span className="definition__title">Definition</span>
+      </div>
+      <div className="word_container">
+        <div className="word_sound">
+          <span className="word_title">Power</span>
+          <span className="word_play">
+            <span class="material-symbols-outlined">volume_up</span>
+          </span>
+        </div>
+        <div className="partOfSpeech_definition">
+          <p className="part">Noun</p>
+          <p className="definition">Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
 
-      <div className="signature_container">
-        <p className="signature">Designed by Muyiwa Johnson</p>
+      
+      <div className="below">
+        <div className="footer">
+          <p class="text">Designed by muyiwa johnson</p>
+        </div>
       </div>
     </div>
   );

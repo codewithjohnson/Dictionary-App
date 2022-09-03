@@ -1,122 +1,150 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,200&display=swap");
 * {
   margin: 0;
-  padding: 0;
   border: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-family: "Poppins", sans-serif;
-
-  background-color: cornflowerblue;
-}
-
-.Home {
+  background: linear-gradient(60deg, cornflowerblue, deepskyblue);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 20rem;
   margin-top: 2rem;
-  overflow: hidden;
+  border-radius: 0.2rem;
+}
+
+/* STYLING THE ABOVE CONTENTS */
+.above {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  padding: 1.5rem 1.2rem;
-  border-radius: 0.3rem;
-  width: 19rem;
+  padding: 0.9rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
 }
-
-/* ----------------------HEAD START---------------------- */
-.head {
-  width: 100%;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+.title {
   font-family: "Ubuntu", sans-serif;
-  margin-bottom: 0.5rem;
-}
-
-.head__title {
-  color: rgb(0, 0, 0);
   text-align: center;
+  color: rgba(0, 0, 0, 0.712);
+  text-transform: capitalize;
+  line-height: 1.7;
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.123);
+  padding-bottom: 0.3rem;
   user-select: none;
 }
-
-.head__title::first-letter {
-  background-color: darkslateblue;
+.title::first-letter {
   background-color: cornflowerblue;
-  margin-right: 0.1rem;
   color: white;
   padding: 0.1rem 0.4rem;
+  margin-right: 0.2rem;
 }
 
-/* ------------ INPUT CONTAINER START--------------------------- */
-.input__containers {
+.inputs_container {
   width: 100%;
-  margin-top: 0.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1.6rem;
+  margin-bottom: 1.1rem;
 }
 
-.text__input {
-  width: 80%;
+.input_box {
   margin-right: 0.3rem;
+  width: 80%;
 }
-.text__input > input {
-  border: 1px solid rgba(0, 0, 0, 0.479);
+
+.input_box input {
   width: 100%;
+  padding: 0.6rem 0.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  margin-right: 0.4rem;
   outline: none;
-  padding: 0.5rem;
-  margin-top: 0.4rem;
 }
-.label {
-  color: rgba(0, 0, 0, 0.808);
+
+.submit_btn {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}
-
-.btn {
-  width: 20%;
-  align-self: end;
-}
-
-.btn .submit__btn {
+  border: 1px solid cornflowerblue;
+  padding: 0.55rem;
   background-color: cornflowerblue;
   color: white;
-  outline: none;
-  padding: 0.5rem;
-  border: 1px solid cornflowerblue;
+  font-size: 0.8rem;
+  font-weight: 400;
   cursor: pointer;
 }
-.submit__btn:hover {
+
+.submit_btn:hover {
   background-color: darkslateblue;
   border-color: darkslateblue;
   color: white;
 }
-/* ----------------- SIGNATURE CONTAINER  START----------------- */
-.signature_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 2rem;
-  overflow: hidden;
-  margin-top: 1.2rem;
+
+/* STYLING WORD CONTAINER */
+.word_container {
+  color: white;
+  background: url("./assets/cool.jpg");
+  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  border: none;
+  padding: 0.9rem;
+  
 }
 
-.signature {
-  animation: AnimateText 15s linear infinite;
-  font-size: 0.7rem;
-  font-family: "Poppins", sans-serif;
+.word_sound {
+  display: flex;
+  margin-top: 0.6rem;
+}
+
+.word_title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.6rem;
+  margin-right: 0.6rem;
+}
+
+.word_sound > .word_play {
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.word_sound > .word_play:hover {
+  background-color: white;
+  color: blue;
+}
+
+/* STYLING BELOW CONTENTS */
+
+.footer {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+  user-select: none;
+}
+
+.text {
+  animation: AnimateText 10s linear infinite;
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-transform: capitalize;
 }
 
 @keyframes AnimateText {
@@ -125,46 +153,11 @@ body {
   }
 }
 
-/*-----------------OUTPUT CONTAINER STYLING------------------- */
-.output__containers {
-  margin-top: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.8rem;
-  width: 100%;
-}
-
-.words {
-  padding: 0.6rem;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.192);
-  border-radius: 0.1rem;
-  margin-bottom: 1.2rem;
-  border: 1px solid transparent;
-}
-.word {
-  border-left-color:darkslateblue;
-}
-.what__word {
-  display: flex;
-  flex-direction: column;
-}
-.word__title,
-.definition__title {
-  font-size: 0.9rem;
-  font-family: "Ubuntu Condensed", sans-serif;
-  font-weight: bold;
-}
-
-.partOfSpeech_phonetics {
-  font-weight: 200;
-  font-size: 0.7rem;
-}
-/* STYLING DEFINITIONS */
-.definition {
-  border-left-color:darkorchid;
-}
-
 @media screen and (max-width: 480px) {
-  .Home {
-    width: 87%;
+  .container {
+    width: 18rem;
+  }
+  .title {
+    font-size: 1.47rem;
   }
 }
