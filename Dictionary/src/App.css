@@ -16,8 +16,8 @@ body {
 }
 
 .container {
-  width: 20rem;
   margin-top: 2rem;
+  width: 20rem;
 }
 
 /* STYLING THE ABOVE CONTENTS */
@@ -155,7 +155,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .container {
-    width:100%;
+    width: 17rem;
   }
   .title {
     font-size: 1.47rem;
