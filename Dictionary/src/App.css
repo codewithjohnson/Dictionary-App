@@ -30,8 +30,8 @@ body {
   align-items: center;
   background-color: white;
   padding:1.2rem 1.1rem;
-  border-top-left-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
 .title {
   font-family: "Ubuntu", sans-serif;
