@@ -11,14 +11,14 @@
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background: linear-gradient(60deg, cornflowerblue, darkslateblue);
+  background: linear-gradient(0deg, cornflowerblue, darkslateblue);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .App {
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 0.7rem;
   width: 20rem;
 }
 
@@ -30,17 +30,15 @@ body {
   align-items: center;
   background-color: white;
   padding: 1rem 1rem;
-
-  border-top-left-radius: 1.1rem;
-  border-top-right-radius: 1.1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 .title {
   font-family: "Ubuntu", sans-serif;
   text-align: center;
-  color: rgba(0, 0, 0, 0.747);
+  color: rgba(0, 0, 0, 0.829);
   text-transform: capitalize;
   line-height: 1.7;
-  /* width: 100%; */
   padding-bottom: 0.3rem;
   user-select: none;
   margin-top: 0.6rem;
@@ -76,8 +74,7 @@ body {
 
 .submit_btn {
   font-family: "Poppins", sans-serif;
-  border: 1px solid cornflowerblue;
-  padding: 0.61rem 0.7rem;
+  padding: 0.66rem 0.7rem;
   background: linear-gradient(60deg, cornflowerblue, darkslateblue);
   color: white;
   font-size: 0.8rem;
@@ -150,8 +147,47 @@ body {
   font-weight: 500;
 }
 
+/* ------------STYLING OUTPUT CONTAINERS--------------- */
+.output__container {
+  background-color: white;
+  color: black;
+
+  padding: 0.9rem;
+}
+.examples,
+.synonyms,
+.antonyms {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+}
+.examples__title,
+.synonyms__title,
+.antonyms__title {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(0, 0, 0, 0.562);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.examples__content,
+.synonyms__content,
+.antonyms__content {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 /* STYLING BELOW CONTENTS */
 
+.below {
+  background:url('./assets/cool.jpg');
+  color: white;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 0.9rem;
+}
 .footer {
   overflow: hidden;
   display: flex;
@@ -163,8 +199,8 @@ body {
 
 .text {
   animation: AnimateText 10s linear infinite;
-  font-size: 0.8rem;
-  font-weight: 200;
+  font-size: 0.7rem;
+  font-weight: 400;
   text-transform: capitalize;
 }
 
@@ -176,7 +212,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    width: 90%;
+    width: 86%;
   }
   .title {
     font-size: 1.5rem;

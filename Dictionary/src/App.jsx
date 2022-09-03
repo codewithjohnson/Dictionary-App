@@ -35,6 +35,23 @@ function App() {
         </div>
       </div>
 
+      <div className="output__container">
+        <div className="examples">
+          <div className="examples__title">Examples</div>
+          <div className="examples__content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
+            suscipit.
+          </div>
+        </div>
+        <div className="synonyms">
+          <div className="synonyms__title">synonyms</div>
+          <div className="synonyms__content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
+            suscipit.
+          </div>
+        </div>
+      </div>
+
       <div className="below">
         <div className="footer">
           <p class="text">Designed by muyiwa johnson</p>
