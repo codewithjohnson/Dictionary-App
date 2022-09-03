@@ -213,7 +213,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    width: 85%;
+    width: 90%;
     margin-top:1.2rem;
   }
   .title {
@@ -226,7 +226,7 @@ body {
   .synonyms__content,
   .antonyms__content {
     font-family: "Poppins", sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.8;
     font-weight: 500;
   }
