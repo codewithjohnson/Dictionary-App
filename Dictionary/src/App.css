@@ -164,8 +164,7 @@ body {
 .synonyms__title,
 .antonyms__title {
   font-family: "Ubuntu", sans-serif;
-  color: rgba(0, 0, 0, 0.562);
-  color: white;
+  color: rgba(255, 255, 255, 0.616);
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 0.4rem;
