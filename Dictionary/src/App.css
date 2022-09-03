@@ -41,7 +41,7 @@ body {
   text-transform: capitalize;
   line-height: 1.7;
   width: 100%;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.123);
+  /* border-bottom: 1px solid rgba(128, 128, 128, 0.123); */
   padding-bottom: 0.3rem;
   user-select: none;
 }
@@ -156,10 +156,10 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    width: 90%;
+    width: 86%;
   }
   .title {
-    font-size: 1.47rem;
+    font-size: 1.5rem;
   }
   .word_title {
     font-size: 1.4rem;
