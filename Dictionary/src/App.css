@@ -217,24 +217,17 @@ body {
 @media screen and (max-width: 480px) {
   .App {
     width: 90%;
-    margin-top:1.2rem;
+    margin-top: 1.2rem;
   }
   .title {
     font-size: 1.5rem;
   }
-  .word_container {
-    color: white;
-    background: url("./assets/cool.jpg");
-    background-size: contain;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    border: none;
-    padding: 1.4rem 1.2rem;
-  }
+
   .word_title {
     font-size: 1.4rem;
+  }
+  .definition {
+    font-weight: 400;
   }
   .examples__content,
   .synonyms__content,
@@ -244,7 +237,7 @@ body {
     line-height: 1.8;
     font-weight: 400;
   }
-  .below{
+  .below {
     padding: 1.2rem;
   }
 }
