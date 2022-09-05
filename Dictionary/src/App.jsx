@@ -10,12 +10,15 @@ const initialData = {
 };
 
 function App() {
-  const [input, setInput] = useState("create");
+  const [input, setInput] = useState("form");
   const [data, setData] = useState(initialData);
   const [synonyms, setSynonyms] = useState("");
+  const [audio, setAudio] = useState("");
+
   useEffect(() => {
     searchText(input);
   }, []);
+
   const HandleData = () => {
     if (input !== "") {
       const filteredText = input.toLowerCase().replace(/[^A-Z0-9]/gi, "");
@@ -36,7 +39,11 @@ function App() {
   const getSentData = (result) => {
     const word = result[0].word;
     const phonetic = result[0].phonetic;
-    const audio = result[0].phonetics[0].audio;
+    const aud =
+      result[0].phonetics[0].audio !== ""
+        ? result[0].phonetics[0].audio
+        : result[0].phonetics[1].audio;
+    setAudio(aud);
     const meanings = result[0].meanings;
 
     for (let i = 0; i < meanings.length; i++) {
@@ -80,6 +87,11 @@ function App() {
     searchText(synonyms);
   };
 
+  const playAudio = () => {
+    let playAudio = new Audio(audio);
+    playAudio.play();
+  };
+
   return (
     <div className="App">
       <div className="above">
@@ -106,7 +118,9 @@ function App() {
         <div className="word_sound">
           <span className="word_title">{data.word}</span>
           <span className="word_play">
-            <span class="material-symbols-outlined">volume_up</span>
+            <span class="material-symbols-outlined" onClick={playAudio}>
+              volume_up
+            </span>
           </span>
         </div>
         <div className="partOfSpeech_definition">
