@@ -1,18 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 
 function App() {
+  const [input, setInput] = useState("");
+  const HandleData = () => {
+    if (input !== "") {
+      const filteredText = input.toLowerCase().replace(/[^A-Z0-9]/gi, "");
+      searchText(filteredText);
+    }
+  };
+  const searchText = (text) => {
+    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${text}`;
+    fetch(url).then((response) => {
+      const data = response.json();
+      console.log(data);
+    });
+  };
+
   return (
     <div className="App">
       <div className="above">
         <h2 className="title">english dictionary</h2>
         <div className="inputs_container">
           <div className="input_box">
-            <input type="text" placeholder="Search a Word" />
+            <input
+              type="text"
+              placeholder="Search a Word"
+              value={input}
+              onChange={(e) => {
+                setInput(e.target.value);
+              }}
+            />
           </div>
           <div className="btn">
-            <button className="submit_btn">Search</button>
+            <button className="submit_btn" onClick={HandleData}>
+              Search
+            </button>
           </div>
         </div>
       </div>
