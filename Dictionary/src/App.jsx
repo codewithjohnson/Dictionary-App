@@ -123,7 +123,7 @@ function App() {
         </div>
         <div className="synonyms">
           <div className="synonyms__title">synonym</div>
-          <div className="synonyms__content">{synonyms}</div>
+          <div className="synonyms__content"><p>{synonyms}</p></div>
         </div>
       </div>
 

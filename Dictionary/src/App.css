@@ -182,7 +182,14 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.9;
   font-weight: 400;
+  
   color: rgba(255, 255, 255, 0.582);
+}
+
+
+.synonyms__content > p {
+  text-decoration: underline;
+  text-transform: capitalize;
 }
 
 /* STYLING BELOW CONTENTS */
@@ -240,6 +247,7 @@ body {
     line-height: 1.8;
     font-weight: 400;
   }
+
   .below {
     padding: 1.2rem;
   }
