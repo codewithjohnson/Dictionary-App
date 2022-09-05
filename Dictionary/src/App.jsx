@@ -7,12 +7,12 @@ const initialData = {
   phonetic: "",
   definition: "",
   example: "",
-  synonyms: [],
 };
 
 function App() {
   const [input, setInput] = useState("test");
   const [data, setData] = useState(initialData);
+  const [synonyms, setSynonyms] = useState([]);
   useEffect(() => {
     searchText(input);
   }, []);
@@ -35,19 +35,18 @@ function App() {
 
   const getSentData = (result) => {
     const word = result[0].word;
-    const phonetic = result[0].phonetic || result[0].phonetics[1]?.text;
-    const audio =
-      result[0].phonetics[0].audio ||
-      result[0].phonetics[1].audio ||
-      result[0].phonetics[2].audio;
+    const phonetic = result[0].phonetic;
+    const audio = result[0].phonetics[0].audio;
     const meanings = result[0].meanings;
+
     for (let i = 0; i < meanings.length; i++) {
       const definitions = meanings[i].definitions;
       for (let j = 0; j < definitions.length; j++) {
-        if (definitions[j].example !== undefined) {
+        if (definitions[j]?.example !== undefined) {
           const example = definitions[j].example;
           const definition = definitions[j].definition;
           const partOfSpeech = meanings[i].partOfSpeech;
+
           setData({
             ...data,
             word: word,
@@ -57,6 +56,21 @@ function App() {
             example: example,
           });
           break;
+        }
+      }
+    }
+
+    for (let i = 0; i < meanings.length; i++) {
+      if (meanings[i].synonyms.length !== 0) {
+        let syn = [];
+        for (let k = 0; k < meanings[i].synonyms.length; k++) {
+          if (meanings[i].synonyms[k] !== undefined) {
+            const synonym = meanings[i].synonyms[k];
+            syn.push(synonym);
+            setSynonyms([syn]);
+
+            break;
+          }
         }
       }
     }
@@ -108,11 +122,8 @@ function App() {
           <div className="examples__content">{data.example}</div>
         </div>
         <div className="synonyms">
-          <div className="synonyms__title">synonyms</div>
-          <div className="synonyms__content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
-            suscipit.
-          </div>
+          <div className="synonyms__title">synonym</div>
+          <div className="synonyms__content">{synonyms}</div>
         </div>
       </div>
 
