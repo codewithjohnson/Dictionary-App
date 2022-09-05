@@ -4,16 +4,18 @@ const initialData = {
   word: "",
   audio: "",
   partOfSpeech: "",
-  phonetics: "",
+  phonetic: "",
   definition: "",
-  examples: "",
+  example: "",
   synonyms: [],
 };
 
 function App() {
-  const [input, setInput] = useState("example");
+  const [input, setInput] = useState("test");
   const [data, setData] = useState(initialData);
-
+  useEffect(() => {
+    searchText(input);
+  }, []);
   const HandleData = () => {
     if (input !== "") {
       const filteredText = input.toLowerCase().replace(/[^A-Z0-9]/gi, "");
@@ -21,11 +23,43 @@ function App() {
     }
   };
   const searchText = (text) => {
-    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${text}`;
-    fetch(url).then((response) => {
-      const result = response.json();
-      console.log(result);
-    });
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`)
+      .then((res) => res.json())
+      .then((data) => {
+        getSentData(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const getSentData = (result) => {
+    const word = result[0].word;
+    const phonetic = result[0].phonetic || result[0].phonetics[1]?.text;
+    const audio =
+      result[0].phonetics[0].audio ||
+      result[0].phonetics[1].audio ||
+      result[0].phonetics[2].audio;
+    const meanings = result[0].meanings;
+    for (let i = 0; i < meanings.length; i++) {
+      const definitions = meanings[i].definitions;
+      for (let j = 0; j < definitions.length; j++) {
+        if (definitions[j].example !== undefined) {
+          const example = definitions[j].example;
+          const definition = definitions[j].definition;
+          const partOfSpeech = meanings[i].partOfSpeech;
+          setData({
+            ...data,
+            word: word,
+            partOfSpeech: partOfSpeech,
+            phonetic: phonetic,
+            definition: definition,
+            example: example,
+          });
+          break;
+        }
+      }
+    }
   };
 
   return (
@@ -52,30 +86,26 @@ function App() {
       </div>
       <div className="word_container">
         <div className="word_sound">
-          <span className="word_title">Power</span>
+          <span className="word_title">{data.word}</span>
           <span className="word_play">
             <span class="material-symbols-outlined">volume_up</span>
           </span>
         </div>
         <div className="partOfSpeech_definition">
           <div className="part0fSpeech_view">
-            <span className="part0fSpeech">Noun</span>
-            <span className="view">/hɛˈləʊ/</span>
+            <span className="part0fSpeech">{data.partOfSpeech}</span>
+            <span className="view">{data.phonetic}</span>
           </div>
           <p className="definition">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-            officia.
+            <span className="definition__content"> {data.definition}</span>
           </p>
         </div>
       </div>
 
       <div className="output__container">
         <div className="examples">
-          <div className="examples__title">Examples</div>
-          <div className="examples__content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
-            suscipit.
-          </div>
+          <div className="examples__title">Example</div>
+          <div className="examples__content">{data.example}</div>
         </div>
         <div className="synonyms">
           <div className="synonyms__title">synonyms</div>

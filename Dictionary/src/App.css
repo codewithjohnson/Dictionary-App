@@ -110,6 +110,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.5rem;
   margin-right: 0.9rem;
+  text-transform: capitalize;
 }
 
 .word_sound > .word_play {
@@ -138,7 +139,8 @@ body {
   color: rgba(255, 255, 255, 0.651);
 }
 .part0fSpeech {
-  margin-right: 0.4rem;
+  margin-right: 0.8rem;
+  text-transform: capitalize;
 }
 
 .definition {
@@ -153,6 +155,7 @@ body {
   background: url("./assets/cool.jpg");
   color: white;
   padding: 0.9rem;
+  overflow: auto;
 }
 .examples,
 .synonyms,
