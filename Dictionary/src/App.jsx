@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-
 import "./App.css";
+const initialData = {
+  word: "",
+  audio: "",
+  partOfSpeech: "",
+  phonetics: "",
+  definition: "",
+  examples: "",
+  synonyms: [],
+};
 
 function App() {
-  const [input, setInput] = useState("");
-  const initialData = {
-    word: "",
-    audio: "",
-    partOfSpeech: "",
-    phonetics: "",
-    definition: "",
-    examples: "",
-    synonyms: [],
-  };
-  console.log(initialData);
+  const [input, setInput] = useState("example");
+  const [data, setData] = useState(initialData);
+
   const HandleData = () => {
     if (input !== "") {
       const filteredText = input.toLowerCase().replace(/[^A-Z0-9]/gi, "");
