@@ -10,9 +10,9 @@ const initialData = {
 };
 
 function App() {
-  const [input, setInput] = useState("conduct");
+  const [input, setInput] = useState("create");
   const [data, setData] = useState(initialData);
-  const [synonyms, setSynonyms] = useState();
+  const [synonyms, setSynonyms] = useState("");
   useEffect(() => {
     searchText(input);
   }, []);
@@ -67,12 +67,17 @@ function App() {
           if (meanings[i].synonyms[k] !== undefined) {
             const synonym = meanings[i].synonyms[k];
             syn.push(synonym);
-            setSynonyms([syn]);
+            setSynonyms(synonym);
             break;
           }
         }
       }
     }
+  };
+
+  const HandleSynonyms = () => {
+    setInput(synonyms);
+    searchText(synonyms);
   };
 
   return (
@@ -123,7 +128,7 @@ function App() {
         <div className="synonyms">
           <div className="synonyms__title">synonym</div>
           <div className="synonyms__content">
-            <p>{synonyms}</p>
+            <p onClick={HandleSynonyms}>{synonyms}</p>
           </div>
         </div>
       </div>

@@ -190,6 +190,13 @@ body {
   text-decoration: underline;
   text-transform: capitalize;
   text-underline-offset: 0.3rem;
+  cursor: pointer;
+}
+.synonyms__content > p:hover{
+  background-color:darkslateblue;
+  padding: 0.02rem 0.3rem;
+  color: white;
+  width:fit-content;
 }
 
 /* STYLING BELOW CONTENTS */
