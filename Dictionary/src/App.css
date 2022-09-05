@@ -144,7 +144,7 @@ body {
 .definition {
   font-size: 0.9rem;
   font-weight: 500;
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.8rem;
 }
 
 /* ------------STYLING OUTPUT CONTAINERS--------------- */
@@ -152,7 +152,6 @@ body {
   background-color: white;
   background: url("./assets/cool.jpg");
   color: white;
-
   padding: 0.9rem;
 }
 .examples,

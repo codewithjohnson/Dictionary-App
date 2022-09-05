@@ -4,6 +4,16 @@ import "./App.css";
 
 function App() {
   const [input, setInput] = useState("");
+  const initialData = {
+    word: "",
+    audio: "",
+    partOfSpeech: "",
+    phonetics: "",
+    definition: "",
+    examples: "",
+    synonyms: [],
+  };
+  console.log(initialData);
   const HandleData = () => {
     if (input !== "") {
       const filteredText = input.toLowerCase().replace(/[^A-Z0-9]/gi, "");
@@ -13,8 +23,8 @@ function App() {
   const searchText = (text) => {
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${text}`;
     fetch(url).then((response) => {
-      const data = response.json();
-      console.log(data);
+      const result = response.json();
+      console.log(result);
     });
   };
 
