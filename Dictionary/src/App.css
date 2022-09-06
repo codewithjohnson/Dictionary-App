@@ -193,6 +193,7 @@ body {
   cursor: pointer;
   overflow-wrap: break-word;
   font-size: 0.6rem;
+  line-height: 1.7;
 }
 
 /* STYLING BELOW CONTENTS */
