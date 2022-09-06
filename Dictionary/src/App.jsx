@@ -10,7 +10,7 @@ const initialData = {
 };
 
 function App() {
-  const [input, setInput] = useState("happy");
+  const [input, setInput] = useState("form");
   const [data, setData] = useState(initialData);
   const [synonyms, setSynonyms] = useState([]);
   const [audio, setAudio] = useState("");

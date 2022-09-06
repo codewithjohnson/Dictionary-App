@@ -192,6 +192,7 @@ body {
   text-underline-offset: 0.3rem;
   cursor: pointer;
   overflow-wrap: break-word;
+  font-size: 0.6rem;
 }
 
 /* STYLING BELOW CONTENTS */
