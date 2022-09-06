@@ -10,9 +10,9 @@ const initialData = {
 };
 
 function App() {
-  const [input, setInput] = useState("form");
+  const [input, setInput] = useState("happy");
   const [data, setData] = useState(initialData);
-  const [synonyms, setSynonyms] = useState("");
+  const [synonyms, setSynonyms] = useState([]);
   const [audio, setAudio] = useState("");
 
   useEffect(() => {
@@ -74,17 +74,11 @@ function App() {
           if (meanings[i].synonyms[k] !== undefined) {
             const synonym = meanings[i].synonyms[k];
             syn.push(synonym);
-            setSynonyms(synonym);
-            break;
+            setSynonyms(syn);
           }
         }
       }
     }
-  };
-
-  const HandleSynonyms = () => {
-    setInput(synonyms);
-    searchText(synonyms);
   };
 
   const playAudio = () => {
@@ -142,7 +136,13 @@ function App() {
         <div className="synonyms">
           <div className="synonyms__title">synonym</div>
           <div className="synonyms__content">
-            <p onClick={HandleSynonyms}>{synonyms}</p>
+            {synonyms.map((arr, index) => {
+              return (
+                <span key={index} className="synonyms_each">
+                  {arr},
+                </span>
+              );
+            })}
           </div>
         </div>
       </div>

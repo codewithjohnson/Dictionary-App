@@ -157,15 +157,12 @@ body {
   padding: 0.9rem;
   overflow: auto;
 }
-.examples,
-.synonyms,
-.antonyms {
+.examples{
   padding-bottom: 0.9rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.178);
 }
 .examples__title,
-.synonyms__title,
-.antonyms__title {
+.synonyms__title {
   font-family: "Ubuntu", sans-serif;
   color: rgba(255, 255, 255, 0.616);
   text-transform: uppercase;
@@ -186,17 +183,13 @@ body {
   color: rgba(255, 255, 255, 0.582);
 }
 
-.synonyms__content > p {
+.synonyms_each {
+  margin-right: 0.2rem;
   text-decoration: underline;
   text-transform: capitalize;
   text-underline-offset: 0.3rem;
   cursor: pointer;
-}
-.synonyms__content > p:hover{
-  background-color:darkslateblue;
-  padding: 0.02rem 0.3rem;
-  color: white;
-  width:fit-content;
+  overflow-wrap: break-word;
 }
 
 /* STYLING BELOW CONTENTS */
