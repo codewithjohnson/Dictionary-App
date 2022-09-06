@@ -134,7 +134,7 @@ function App() {
           <div className="examples__content">{data.example}</div>
         </div>
         <div className="synonyms">
-          <div className="synonyms__title">synonym</div>
+          <div className="synonyms__title">synonyms</div>
           <div className="synonyms__content">
             {synonyms.map((arr, index) => {
               return (

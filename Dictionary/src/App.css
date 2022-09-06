@@ -157,7 +157,7 @@ body {
   padding: 0.9rem;
   overflow: auto;
 }
-.examples{
+.examples {
   padding-bottom: 0.9rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.178);
 }
@@ -171,7 +171,9 @@ body {
   margin-top: 0.9rem;
   font-size: 1.1rem;
 }
-
+.synonyms__title {
+  margin-top: 0.3rem;
+}
 .examples__content,
 .synonyms__content,
 .antonyms__content {
