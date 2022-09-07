@@ -86,6 +86,12 @@ function App() {
     playAudio.play();
   };
 
+  const HandleOnEnterKey = (e) => {
+    if (e.key === "Enter" && input !== "") {
+      HandleData();
+    }
+  };
+
   return (
     <div className="App">
       <div className="above">
@@ -98,6 +104,9 @@ function App() {
               value={input}
               onChange={(e) => {
                 setInput(e.target.value);
+              }}
+              onKeyUp={(e) => {
+                HandleOnEnterKey(e);
               }}
             />
           </div>
